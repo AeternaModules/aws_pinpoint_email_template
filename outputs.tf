@@ -1,7 +1,3 @@
-output "pinpoint_email_templates_id" {
-  description = "Map of id values across all pinpoint_email_templates, keyed the same as var.pinpoint_email_templates"
-  value       = { for k, v in aws_pinpoint_email_template.pinpoint_email_templates : k => v.id if v.id != null && length(v.id) > 0 }
-}
 output "pinpoint_email_templates_arn" {
   description = "Map of arn values across all pinpoint_email_templates, keyed the same as var.pinpoint_email_templates"
   value       = { for k, v in aws_pinpoint_email_template.pinpoint_email_templates : k => v.arn if v.arn != null && length(v.arn) > 0 }
